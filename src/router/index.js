@@ -66,9 +66,16 @@ export const constantRouterMap = [
       },
       {
         path: 'group',
-        name: 'DeviceGroup',
-        component: () => import('@/views/devicemanage/product/group'),
+        name: 'Group',
+        component: () => import('@/views/devicemanage/group/list'),
         meta: { title: '分组', icon: 'table' }
+      },
+      {
+        path: '/group/:id',
+        name: 'GroupDetail',
+        component: () => import('@/views/devicemanage/group/detail'),
+        hidden: true,
+        meta: { title: '分组详情' }
       }
     ]
   },
